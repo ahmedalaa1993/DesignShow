@@ -220,11 +220,27 @@ background-color: transparent; }
 .logo-box{
   position: absolute;
   right: 7%;
-  top: 50%;
+  top: 55%;
+ 
   transform: translateY(-50%);
 }
+.logo-box >span 
+{
+  font-size: 1.8rem;
+  color: #fff;
+}
 
-
+.navbar-navi .social-icons
+{
+  bottom:12%;
+}
+.navbar-navi .social-icons i
+{
+  font-size: 1.3rem;
+  color:#fff;
+  margin:10px;
+  cursor: pointer;
+}
 
 /* search box */
 .search-box form {
