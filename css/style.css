@@ -757,31 +757,6 @@ sup {
 /* end */
 
 
-/* sign up */
-
-#signUp .main-box {
-    margin-top: 4rem;
-    padding: 5rem;
-    border: 1px solid #ccc;
-    border-top-right-radius: 50px
-}
-
-.form-control:focus {
-    box-shadow: 0 0 5px 0.1rem #00dde169;
-}
-
-#signUp .main-box form input[type='checkbox'] {
-    margin: 5px;
-    outline: 2px solid #00DEE1;
-    outline-offset: -2px;
-    box-shadow: none;
-    font-size: 2em;
-}
-
-
-/* end  */
-
-
 /* contact form  */
 
 .contact-left-inner,
