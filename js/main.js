@@ -1,14 +1,5 @@
 const navbtn = document.getElementById('nav-toggle'),
-    navBack = document.querySelector('#navback')
-
-;
-
-
-
-
-
-
-
+    navBack = document.querySelector('#navback')  ;
 
 
 
@@ -22,13 +13,51 @@ navbtn.addEventListener('click', function() {
     console.log('hh')
 })
 
-// fadIn circle 
+
 
 
 $(document).ready(function() {
-    console.log('heloo')
-    $('.heading-circle').fadeIn(1800);
-});
+
+    $('.heading-circle-sec').fadeIn(2000);   
+
+
+    setTimeout(() => {
+
+        // fadIn circle 
+        $('#intro').fadeIn(2000);
+
+        
+        setTimeout(() => {
+
+            // fadIn logo            
+                $('#logo-intro').show();
+                $('.tlt').textillate({ in: { effect: 'fadeInUpBig',delay: 90 } });    
+                
+                //fadi in btn 
+                setTimeout(() => {
+                    $('.intro-btn').show();
+                    $('.intro-btn').addClass('animate__animated animate__zoomIn');        
+
+                }, 2200);
+
+            }, 2000);
+            
+        }, 8000);
+
+
+
+     
+    
+        
+    });
+
+
+
+
+
+
+
+
 
 
 
@@ -38,13 +67,6 @@ document.querySelector('.search-icon').onclick = function(e) {
     document.querySelector('.form-search').classList.toggle('open');
 }
 
-// fadIn circle 
-
-
-$(document).ready(function() {
-    console.log('heloo')
-    $('.heading-circle').fadeIn(1800);
-});
 
 //slider in work page by plugin owl-carousel
 $(document).ready(function() {
