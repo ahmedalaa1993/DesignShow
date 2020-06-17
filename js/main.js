@@ -1,5 +1,5 @@
 const navbtn = document.getElementById('nav-toggle'),
-    navBack = document.querySelector('#navback')  ;
+    navBack = document.querySelector('#navback');
 
 
 
@@ -18,7 +18,7 @@ navbtn.addEventListener('click', function() {
 
 $(document).ready(function() {
 
-    $('.heading-circle-sec').fadeIn(2000);   
+    $('.heading-circle-sec').fadeIn(2000);
 
 
     setTimeout(() => {
@@ -26,30 +26,30 @@ $(document).ready(function() {
         // fadIn circle 
         $('#intro').fadeIn(2000);
 
-        
+
         setTimeout(() => {
 
             // fadIn logo            
-                $('#logo-intro').show();
-                $('.tlt').textillate({ in: { effect: 'fadeInUpBig',delay: 90 } });    
-                
-                //fadi in btn 
-                setTimeout(() => {
-                    $('.intro-btn').show();
-                    $('.intro-btn').addClass('animate__animated animate__zoomIn');        
+            $('#logo-intro').show();
+            $('.tlt').textillate({ in: { effect: 'fadeInUpBig', delay: 90 } });
 
-                }, 2200);
+            //fadi in btn 
+            setTimeout(() => {
+                $('.intro-btn').show();
+                $('.intro-btn').addClass('animate__animated animate__zoomIn');
 
-            }, 2000);
-            
-        }, 8000);
+            }, 2200);
+
+        }, 2000);
+
+    }, 8000);
 
 
 
-     
-    
-        
-    });
+
+
+
+});
 
 
 
@@ -70,8 +70,25 @@ document.querySelector('.search-icon').onclick = function(e) {
 
 //slider in work page by plugin owl-carousel
 $(document).ready(function() {
-    $(".owl-carousel").owlCarousel();
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            }
+        },
+    })
 });
+
 
 
 //set array for project
