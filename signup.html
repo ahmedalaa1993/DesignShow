@@ -13,41 +13,42 @@
 </head>
 
 <body>
-    <section id="signUp">
-        <div class="container row">
-            <div class="offset-md-3"></div>
-            <div class="m-auto col-md-7 card shadow p-5">
-                <h3 class="text-center font-weight-bold">Sing Up</h3>
-                <div class="line"></div>
-                <form class="py-3">
-                    <div class="form-row mt-3 ">
-                        <div class="form-group p-2 col-md-6">
-                            <input id="name" class="form-control" type="text" name="first" placeholder="First Name">
+    <section class="signup">
+        <div class="containerx ">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" />
                         </div>
-                        <div class="form-group p-2 col-md-6">
-
-                            <input id="last-name" class="form-control" type="text" name="last" placeholder="Last Name">
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" />
                         </div>
-                        <div class="form-group p-2 col-md-12">
-                            <input class="form-control" type="email" name="email" placeholder="Email">
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password" />
                         </div>
-                        <div class="form-group p-2 col-md-6">
-                            <input class="form-control" type="password" name="pass" placeholder="password">
+                        <div class="form-group">
+                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
                         </div>
-                        <div class="form-group p-2 col-md-6">
-                            <input class="form-control" type="password" name="pass" placeholder="confirm password">
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
-                        <div class="px-3">
-                            <span>already have an account ?</span>
-                            <a href="#" class="text-decoration-none font-weight-bold text-info">login</a>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
                         </div>
-                    </div>
-                    <div class=" pt-4">
-                        <button class="btn btn-outline-info">Sign up</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="file:///C:/Users/HP840/Desktop/colorlib-regform-7/images/signup-image.jpg" alt="sing up image"></figure>
+                    <a href="#" class="signup-image-link text-primary form-title font-weight-bold">I am already member</a>
+                </div>
             </div>
-
         </div>
     </section>
 

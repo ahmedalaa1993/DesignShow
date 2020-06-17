@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 //set array for project
 localStorage.setItem("projects", JSON.stringify([{
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9c4AIwXXINgJUMS39tddg92pKz-1-DePZ-x77ZQgneqWKHhpS&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-template/assets/images/homepage-template.jpg",
         projectTitle: "title",
         date: "20/11/2019",
         views: 200,
@@ -101,7 +101,7 @@ localStorage.setItem("projects", JSON.stringify([{
         likes: 32
     },
     {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBVIZx1SxmFMk1V33pmBHCxpuNMeVl7v0aAix7PHfHJLoo3FXl&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-template/assets/images/bootstrap-starter-template-492x492.jpg",
         projectTitle: "title",
         date: "10/09/2020",
         views: 580,
@@ -109,7 +109,7 @@ localStorage.setItem("projects", JSON.stringify([{
         likes: 98
     },
     {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9c4AIwXXINgJUMS39tddg92pKz-1-DePZ-x77ZQgneqWKHhpS&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-template/assets/images/agency-template.jpg",
         projectTitle: "title",
         date: "20/11/2019",
         views: 200,
@@ -117,7 +117,7 @@ localStorage.setItem("projects", JSON.stringify([{
         likes: 32
     },
     {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBVIZx1SxmFMk1V33pmBHCxpuNMeVl7v0aAix7PHfHJLoo3FXl&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/magazine-template.jpg",
         projectTitle: "title",
         date: "10/09/2020",
         views: 580,
@@ -125,7 +125,7 @@ localStorage.setItem("projects", JSON.stringify([{
         likes: 98
     },
     {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9c4AIwXXINgJUMS39tddg92pKz-1-DePZ-x77ZQgneqWKHhpS&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/business-template.jpg",
         projectTitle: "title",
         date: "20/11/2019",
         views: 200,
@@ -133,14 +133,14 @@ localStorage.setItem("projects", JSON.stringify([{
         likes: 32
     },
     {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBVIZx1SxmFMk1V33pmBHCxpuNMeVl7v0aAix7PHfHJLoo3FXl&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/restaurant-template.jpg",
         projectTitle: "title",
         date: "10/09/2020",
         views: 580,
         rating: 220,
         likes: 98
     }, {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9c4AIwXXINgJUMS39tddg92pKz-1-DePZ-x77ZQgneqWKHhpS&usqp=CAU",
+        imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/hotel-template.jpg",
         projectTitle: "title",
         date: "20/11/2019",
         views: 200,
@@ -148,7 +148,7 @@ localStorage.setItem("projects", JSON.stringify([{
         likes: 32
     },
     {
-        imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSBVIZx1SxmFMk1V33pmBHCxpuNMeVl7v0aAix7PHfHJLoo3FXl&usqp=CAU",
+        imageURL: "https://colorlib.com/wp/wp-content/uploads/sites/2/menztailor-free-template-388x306.jpg",
         projectTitle: "title",
         date: "10/09/2020",
         views: 580,
@@ -175,8 +175,8 @@ function getProjects() {
     for (let i of projects) {
         listProjects += `
         <div class="col-md-4 p-4 blogBox moreBox">
-        <div class="card shadow">
-            <img src="${i.imageURL}" class="w-100" alt="">
+        <div class="card shadow h-100">
+            <img src="${i.imageURL}" class="w-100 border-bottom border-light h-75" alt="">
             <div class="p-3">
                 <h4>${i.projectTitle}</h4>
                 <p>${i.date}</p>
