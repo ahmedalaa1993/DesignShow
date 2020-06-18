@@ -1,9 +1,9 @@
-const  form = document.getElementById('register-form') ,
-sing = document.getElementById('signup') ,
-username = document.querySelector('#username') ,
-email = document.querySelector('#email') ,
-password = document.querySelector('#password') ,
-password2 = document.querySelector('#password-confirm') ;
+const  form = document.getElementById('register-form') ;
+const sing = document.getElementById('signup') ;
+const username = document.querySelector('#username') ;
+const email = document.querySelector('#email') ;
+const password = document.querySelector('#password') ;
+const password2 = document.querySelector('#password-confirm') ;
 
   
 //validation form 
@@ -11,7 +11,7 @@ password2 = document.querySelector('#password-confirm') ;
 //show error message
 function showError(input , message){
     const formControl = input.parentElement ; 
-    console.log(formControl)
+    // console.log(formControl)
     formControl.classList.add('error');
     const small =formControl.querySelector('small');
     small.innerText= message;
@@ -33,7 +33,9 @@ function checkRequired(inputArr){
 }
 
 // Check email is valid
+
 function checkEmail(input) {
+    
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (re.test(input.value.trim())) { 
     //   showSuccess(input);
@@ -41,6 +43,7 @@ function checkEmail(input) {
       showError(input, 'Email is not valid');
     }
   }
+
   //check lenth
   function checkLenth(input,min,max){
     if(input.value.length < min){
@@ -63,16 +66,17 @@ function checkPasswordsMatch(input1 , input2){
 //event lestener 
 form.addEventListener('submit' , function(e) {
 
-    
-        console.log("sasa")
+    $('.form-group-label').fadeOut(400)
+        // console.log("sasa")
         e.preventDefault();
-    
+        
+        console.log(email)
         checkEmail(email);
         checkLenth(username,3,20);
         checkLenth(password,6,20);
         checkPasswordsMatch(password,password2)
-        checkRequired( [username , email , password , password2] );
-    
+        checkRequired( [username  , password , password2] );
+        
     })
     
    
