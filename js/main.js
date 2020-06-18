@@ -81,7 +81,6 @@ var signinFormContent = ` <i class="fas fa-times-circle fa-2x "></i>
     <div class="signin-content">
         <div class="signin-image">
             <figure><img src="https://thumbs.dreamstime.com/b/dreamcatcher-against-background-colorful-splash-91495859.jpg" class="w-100" alt="sing up image"></figure>
-            <p class="pt-2 text-center">Don't have account? <a href="./signup.html" class="text-decoration-none text-info">SingUp</a></p>
         </div>
 
         <div class="signin-form">
@@ -110,6 +109,7 @@ var signinFormContent = ` <i class="fas fa-times-circle fa-2x "></i>
                         </ul>
                     </div>
                 </div>
+                <p class="pt-2 text-center">Don't have account? <a href="./signup.html" class="text-decoration-none text-info">SingUp</a></p>
             </form>
         </div>
     </div>
@@ -120,7 +120,12 @@ $('#userIcon').on('click', function() {
         $('.sign-in').css({ "display": "none" })
     })
 });
-
+$('.loginFromSignupPage').on('click', function() {
+    $('.sign-in').html(signinFormContent).css({ "display": "block" })
+    $('.fa-times-circle').on("click", function() {
+        $('.sign-in').css({ "display": "none" })
+    })
+});
 //set array for project
 localStorage.setItem("projects", JSON.stringify([{
         imageURL: "https://mobirise.com/bootstrap-template/assets/images/homepage-template.jpg",
@@ -204,7 +209,7 @@ function getProjects() {
     var listProjects = '';
     for (let i of projects) {
         listProjects += `
-        <div class="col-md-4 p-4 blogBox moreBox">
+        <div class="col-md-4 p-4 projectBox">
         <div class="card shadow h-100">
             <img src="${i.imageURL}" class="w-100 border-bottom border-light h-75" alt="">
             <div class="p-3">
