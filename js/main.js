@@ -33,7 +33,7 @@ $(document).ready(function() {
 
             // fadIn logo            
                 $('#logo-intro').show();
-                $('.tlt').textillate({ in: { effect: 'fadeInUpBig',delay: 90 } });    
+                $('.tlt').textillate({ in: { effect: 'fadeInUpBig' , delay: 90 } });    
                 
                 //fadi in btn 
                 setTimeout(() => {
