@@ -44,21 +44,7 @@ $(document).ready(function() {
 
     }, 8000);
 
-
-
-
-
-
 });
-
-
-
-
-
-
-
-
-
 
 
 //form search
@@ -89,7 +75,51 @@ $(document).ready(function() {
     })
 });
 
+//get sign in form
+var signinFormContent = ` <i class="fas fa-times-circle fa-2x "></i>
+<div class="containerx">
+    <div class="signin-content">
+        <div class="signin-image">
+            <figure><img src="https://thumbs.dreamstime.com/b/dreamcatcher-against-background-colorful-splash-91495859.jpg" class="w-100" alt="sing up image"></figure>
+            <p class="pt-2 text-center">Don't have account? <a href="./signup.html" class="text-decoration-none text-info">SingUp</a></p>
+        </div>
 
+        <div class="signin-form">
+            <h2 class="form-title">Sign in</h2>
+            <form method="POST" class="register-form" id="login-form">
+                <div class="form-group">
+                    <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                    <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
+                </div>
+                <div class="form-group">
+                    <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                    <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                    <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                </div>
+                <div class="form-group form-button">
+                    <input type="submit" name="signin" id="signin" class="form-submit" value="Login" />
+                    <div class="social-login">
+                        <span class="social-label">Or Login with</span>
+                        <ul class="socials">
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook fab fa-facebook p-1"></i></a></li>
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter fab fa-twitter p-1"></i></a></li>
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-google fab fa-google p-1"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>`
+$('#userIcon').on('click', function() {
+    $('.sign-in').html(signinFormContent).css({ "display": "block" })
+    $('.fa-times-circle').on("click", function() {
+        $('.sign-in').css({ "display": "none" })
+    })
+});
 
 //set array for project
 localStorage.setItem("projects", JSON.stringify([{
