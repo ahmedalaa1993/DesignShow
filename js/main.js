@@ -1,5 +1,8 @@
 const navbtn = document.getElementById('nav-toggle'),
     navBack = document.querySelector('#navback');
+    navBack = document.querySelector('#navback') ,
+    scrollToTOp = $('.scrolltotop')  ;
+    
 
 
 
@@ -17,33 +20,44 @@ navbtn.addEventListener('click', function() {
 
 
 $(document).ready(function() {
-
     $('.heading-circle-sec').fadeIn(2000);
-
-
     setTimeout(() => {
-
         // fadIn circle 
         $('#intro').fadeIn(2000);
-
-
         setTimeout(() => {
-
             // fadIn logo            
-            $('#logo-intro').show();
-            $('.tlt').textillate({ in: { effect: 'fadeInUpBig', delay: 90 } });
+                $('#logo-intro').show();
+                $('.tlt').textillate({ in: { effect: 'fadeInUpBig' , delay: 90 } });                
+                //fadi in btn 
+                setTimeout(() => {
+                    $('.intro-btn').show();
+                    $('.intro-btn').addClass('animate__animated animate__zoomIn');
+                }, 2200);
+            }, 2000);          
+        }, 8000);     
+});
 
-            //fadi in btn 
-            setTimeout(() => {
-                $('.intro-btn').show();
-                $('.intro-btn').addClass('animate__animated animate__zoomIn');
 
-            }, 2200);
 
-        }, 2000);
+//   scrolling
+$(window).scroll(function(){
 
-    }, 8000);
+    // button for scroll top 
+    const scrollToTOp = $('.scrolltotop');
 
+    if ($(window).scrollTop() >= 550){
+        
+        scrollToTOp.fadeIn(400)
+    }else{
+        scrollToTOp.fadeOut(400)
+
+    }
+});
+scrollToTOp.click(function(){
+    console.log('sad')
+    $('html,body').animate({
+        scrollTop : 0
+    } , 1200);
 });
 
 
