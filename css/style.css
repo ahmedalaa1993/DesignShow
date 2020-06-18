@@ -17,6 +17,31 @@ section {
     padding: 3rem;
 }
 
+.scrolltotop{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-image: radial-gradient(#21292c, #1a1c1d);
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: none;
+}
+
+.scrolltotop i{
+    background-image: linear-gradient(to bottom , var(--main-color-light), var(--main-color-dark));
+    line-height: 3rem;
+    font-size: 1.6rem;
+
+
+    -webkit-background-clip: text;
+-webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 
 /*  *************************** intro page ********************** */
 

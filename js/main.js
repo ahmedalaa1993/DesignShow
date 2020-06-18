@@ -1,5 +1,7 @@
 const navbtn = document.getElementById('nav-toggle'),
-    navBack = document.querySelector('#navback')  ;
+    navBack = document.querySelector('#navback') ,
+    scrollToTOp = $('.scrolltotop')  ;
+    
 
 
 
@@ -43,15 +45,29 @@ $(document).ready(function() {
             }, 2000);
             
         }, 8000);
-
-
-
-     
-    
         
     });
 
+//   scrolling
+$(window).scroll(function(){
 
+    // button for scroll top 
+    const scrollToTOp = $('.scrolltotop');
+
+    if ($(window).scrollTop() >= 550){
+        
+        scrollToTOp.fadeIn(400)
+    }else{
+        scrollToTOp.fadeOut(400)
+
+    }
+});
+scrollToTOp.click(function(){
+    console.log('sad')
+    $('html,body').animate({
+        scrollTop : 0
+    } , 1200);
+});
 
 
 
