@@ -183,7 +183,7 @@ section {
 }
 
 .nav-background.open {
-    transform: scale(70);
+    transform: scale(80);
 }
 
 .nav-icon {
