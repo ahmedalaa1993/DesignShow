@@ -833,7 +833,7 @@ i {
         opacity: 1;
     }
     to {
-        transform: rotate(55deg) translateY(-500px) scale(.1);
+        /* transform: rotate(55deg) translateY(-500px) scale(.1); */
         opacity: 0;
     }
 }
@@ -1542,7 +1542,7 @@ label.valid:after {
         border-radius: 50%;
         pointer-events: none;
         box-shadow: inset 0 0 10px rgba(255 ,255,255, .45);
-        animation: bubbleAnimate 4s linear infinite;
+        animation: bubbleAnimate 8.5s linear infinite;
 
 
     }

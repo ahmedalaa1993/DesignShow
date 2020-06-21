@@ -39,9 +39,11 @@ navbtn.addEventListener('click', function() {
 // show intro circle
 $(document).ready(function() {
     $('.heading-circle-sec').fadeIn(2000);
+    
     setTimeout(() => {
         // fadIn circle 
         $('#intro').fadeIn(2000);
+        $('.introheadingstyle').hide();
         setTimeout(() => {
             // fadIn logo            
                 $('#logo-intro').show();
