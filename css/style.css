@@ -23,6 +23,7 @@ section {
     cursor: pointer;
     width: 3rem;
     height: 3rem;
+    z-index: 50;
     border-radius: 50%;
 }
 
@@ -606,6 +607,7 @@ header {
     padding-bottom: 1.44rem;
 
 }
+
 .section-heading h2::before{
 	content: " ";
 	position: absolute;
@@ -634,7 +636,7 @@ header {
 }
 
 .section-heading h3::after{
-    width: 110px
+    width: 90px
 
 }
 
@@ -1003,12 +1005,13 @@ h2 {
     transform: translate(-50%, -50%);
 }
  
+.member-log
+{margin-left: 10%;padding-top: 1rem;}
 
-.signup-form,
-.signup-image,
-.signin-form,
-.signin-image {
-    width: 60%;
+.signup-form{width: 60%;}
+.signup-image
+ {
+    width: 40%;
     overflow: hidden;
 }
 
@@ -1060,7 +1063,11 @@ h2 {
     padding: .6rem;
 
 }
+.signup-form .section-heading h2::before{width: 40px;}
+.signup-form .section-heading h2::after{
+    width: 80px
 
+}
 #signIn-form .modal-body .icons {
     width: 2.2rem;
     height: 2.2rem;
@@ -1220,6 +1227,8 @@ figure {
     background-image: linear-gradient(45deg, var(--main-color-dark), var(--main-color-light));
     height: 100vh;
 }
+.form-check-input {    margin-left: -4.8rem;}
+
 
 .sign-in {
     position: fixed;
@@ -1238,7 +1247,6 @@ figure {
 
 .signup-form {
     margin-left: 1rem;
-    margin-right: 75px;
     padding-left: 1.2rem;
 }
 
@@ -1273,7 +1281,7 @@ input:focus {
     display: inline-block;
     width: auto;
 }
-
+/* 
 label {
     position: absolute;
     left: 0;
@@ -1312,7 +1320,7 @@ label.valid:after {
     width: 100%;
     height: 100%;
     position: absolute;
-    /* right: 0; */
+    /* right: 0; 
     font-size: 16px;
     color: green;
 }
@@ -1364,7 +1372,7 @@ label.valid:after {
     margin-left: 110px;
     margin-right: 20px;
     margin-top: 10px;
-}
+} */
 
 @media screen and (max-width: 1200px) {
     .containerx {
@@ -1432,49 +1440,87 @@ label.valid:after {
 
 /*# sourceMappingURL=style.css.map */
 
+/* setting box */
 
+.setting-box{
+    position: fixed;
+    left: -160px;
+    top: 35%;
+    width: 160px;
+    z-index: 1000;
+    background-color: #fff;
+    transition: .5s;
 
-/* 
-body{
-    font-size: 10em;
-        background-color: black;overflow: hidden;height: 100vh;} */
-    
-    .bubble{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    }
-    .bubble span{
-        position: absolute;
-        bottom: 50px;
-        background: transparent; 
-        border-radius: 50%;
-        pointer-events: none;
-        box-shadow: inset 0 0 10px rgba(255 ,255,255, .45);
-        animation: bubbleAnimate 4s linear infinite;
-        
-        
-    }
-    
-    .bubble span::before{
-    content: '';
+}
+
+.open-setting{left: 0;}
+.setting-icon {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(rgba(255, 255, 255, 0.507) , transparent);
-    transform: scale(.25) translate(-70%,-70%);
-    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -37px;
+    width: 37px;
+    /* height: 30px; */
+    color: black;
+    background-color: #fff;
+    box-shadow: 3px 5px 15px rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 0;
+    font-size: 1.29rem;
+}
+
+.color-box{
+    padding : 1rem .6rem;
     
-    }
-    @keyframes bubbleAnimate{
-        0%{
-            transform: translateY(0);
-            opacity: 1;
-        }
-        90%
-        {opacity: 1;}
-        100%{
-            transform: translateY(-1200px);
-            opacity: 0;
-        }
-    }
+}
+.color-box h4{
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    margin:13px 0;
+    color: #666;    
+}
+
+.color-box .colors-list{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    
+}
+
+.color-box .colors-list li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #333;
+    opacity: .6;
+    display: inline-block;
+    margin: 2px;
+    transform: scale(1);
+    
+}
+.color-box .colors-list li.active-color{
+    transform: scale(1.15);
+    opacity: 1;}
+.color-box .colors-list li:first-child{
+    background-image: linear-gradient(45deg, #00afec 0%, #00ecde 100%);
+}
+
+.color-box .colors-list li:nth-child(2){
+    background-image: linear-gradient(45deg, #28b485 0%, #7ed56f 100%);
+    
+}
+.color-box .colors-list li:nth-child(3){
+    background-image: linear-gradient(45deg, red 0%, yellow 100%);
+    
+}
+.color-box .colors-list li:nth-child(4){
+    background-image: linear-gradient(45deg, aqua 0%, pink 100%);
+    
+}
+.color-box .colors-list li:nth-child(5){
+    
+    background-image: linear-gradient(45deg, grey 0%, black 100%);
+}

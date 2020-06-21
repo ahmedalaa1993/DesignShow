@@ -1,14 +1,28 @@
 const navbtn = document.getElementById('nav-toggle'),
     navBack = document.querySelector('#navback') ,
-    form = document.getElementById('register-form') ,
-    sing = document.getElementById('signup') ,
-    username = document.querySelector('#username') ,
-    email = document.querySelector('#email') ,
-    password = document.querySelector('#password') ,
-    password2 = document.querySelector('#password-confirm') ,
+    settingIcon = document.querySelector('.setting-icon')
     scrollToTOp = $('.scrolltotop')  ;
     
 
+
+    // check if there's local storage color changing
+    let mainColor = localStorage.getItem('color-option');
+    let mainColor2 = localStorage.getItem('color-option2');
+
+    if (mainColor !== null){
+        // add color from local storage 
+        document.documentElement.style.setProperty('--main-color-dark',mainColor)
+        document.documentElement.style.setProperty('--main-color-light',mainColor2)
+      
+         // --remove active class from elemnts
+         document.querySelectorAll('.colors-list li').forEach(element => {
+            element.classList.remove('active-color')
+            //add active class to active color element
+            element.classList.add('active-color')
+        });
+
+
+    }
    
 
 // navigation bar
@@ -36,7 +50,7 @@ $(document).ready(function() {
                 setTimeout(() => {
                     $('.intro-btn').show();
                     $('.intro-btn').addClass('animate__animated animate__zoomIn');
-                }, 2000);
+                }, 2200);
             }, 2000);          
         }, 8000);     
 });
@@ -94,26 +108,6 @@ $(document).ready(function() {
 });
 
 
-
-// animation bubble
-function createBuubles(){
-    
-    const section = document.querySelector('.bubble')
-    const createElement = document.createElement('span')
-    var size = Math.random() * 60 ;
-
-    createElement.style.width =20 +  size +'px';
-    createElement.style.height =20+ size +'px';
-    createElement.style.left = Math.random() * innerWidth +'px';
-    section.appendChild(createElement)
-
-  setTimeout(() => {
-      createElement.remove()
-  }, 4000);
-  
-  
-}
-setInterval(createBuubles,60)
 
 
 
@@ -289,3 +283,30 @@ function getProjects() {
     }
     document.getElementById('projects-cards').innerHTML += listProjects 
 }
+
+
+// setting box
+settingIcon.onclick= function(){
+    document.querySelector('.setting-box').classList.toggle('open-setting');
+    document.querySelector('.setting-icon i').classList.toggle('fa-spin')
+}
+
+const colorLi = document.querySelectorAll('.colors-list li');
+colorLi.forEach(li => {
+    li.addEventListener('click', e => {
+        //set color in root
+        document.documentElement.style.setProperty('--main-color-dark',e.target.dataset.color)
+        document.documentElement.style.setProperty('--main-color-light',e.target.dataset.color2)
+        //set colors in local storage 
+        localStorage.setItem('color-option',e.target.dataset.color)
+        localStorage.setItem('color-option2',e.target.dataset.color2)
+        // --remove active class from elemnts
+        e.target.parentElement.querySelectorAll('.active-color').forEach(element => {
+            element.classList.remove('active-color')
+        });
+        //add active class to active color element
+        e.target.classList.add('active-color')
+
+
+    })
+});
