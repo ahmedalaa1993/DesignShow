@@ -1,11 +1,17 @@
 const navbtn = document.getElementById('nav-toggle'),
     navBack = document.querySelector('#navback') ,
-    settingIcon = document.querySelector('.setting-icon')
-    scrollToTOp = $('.scrolltotop')  ;
+    settingIcon = document.querySelector('.setting-icon'),
+    scrollToTOp = $('.scrolltotop')  ,
+    projectName = document.querySelector('#upload-name'),
+    projectUrl = document.querySelector('#upload-img'),
+    uploadbBtn = document.querySelector('#upload-btn')    
+    ;
     
+    console.log(uploadbBtn)
 
+   
 
-    // check if there's local storage color changing
+     // check if there's local storage color changing
     let mainColor = localStorage.getItem('color-option');
     let mainColor2 = localStorage.getItem('color-option2');
 
@@ -23,9 +29,7 @@ const navbtn = document.getElementById('nav-toggle'),
 
 
     }
-   
-
-// navigation bar
+    // navigation bar
 navbtn.addEventListener('click', function() {
 
     navBack.classList.toggle('open');
@@ -33,9 +37,6 @@ navbtn.addEventListener('click', function() {
     document.querySelector('.navbar-navi').classList.toggle('open')
     console.log('hh')
 })
-
-
-
 // show intro circle
 $(document).ready(function() {
     $('.heading-circle-sec').fadeIn(2000);
@@ -56,9 +57,6 @@ $(document).ready(function() {
             }, 2000);          
         }, 8000);     
 });
-
-
-
 //   scrolling
 $(window).scroll(function(){
 
@@ -79,15 +77,11 @@ scrollToTOp.click(function(){
         scrollTop : 0
     } , 1200);
 });
-
-
 //form search
 document.querySelector('.search-icon').onclick = function(e) {
     e.preventDefault();
     document.querySelector('.form-search').classList.toggle('open');
 }
-
-
 //slider in work page by plugin owl-carousel
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
@@ -109,98 +103,183 @@ $(document).ready(function() {
     })
 });
 
-
-
-
-//set array for project
-localStorage.setItem("projects", JSON.stringify([{
+var projectsArr =[
+    {
         imageURL: "https://mobirise.com/bootstrap-template/assets/images/homepage-template.jpg",
-        projectTitle: "title",
-        date: "20/11/2019",
-        views: 200,
-        rating: 200,
-        likes: 32
+        projectTitle: "project One",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     },
     {
         imageURL: "https://mobirise.com/bootstrap-template/assets/images/bootstrap-starter-template-492x492.jpg",
-        projectTitle: "title",
-        date: "10/09/2020",
-        views: 580,
-        rating: 220,
-        likes: 98
+        projectTitle: "project Two",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     },
     {
         imageURL: "https://mobirise.com/bootstrap-template/assets/images/agency-template.jpg",
-        projectTitle: "title",
-        date: "20/11/2019",
-        views: 200,
-        rating: 200,
-        likes: 32
+        projectTitle: "project three",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     },
     {
         imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/magazine-template.jpg",
-        projectTitle: "title",
-        date: "10/09/2020",
-        views: 580,
-        rating: 220,
-        likes: 98
+        projectTitle: "project four",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     },
     {
         imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/business-template.jpg",
-        projectTitle: "title",
-        date: "20/11/2019",
-        views: 200,
-        rating: 200,
-        likes: 32
+        projectTitle: "project five",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     },
     {
         imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/restaurant-template.jpg",
-        projectTitle: "title",
-        date: "10/09/2020",
-        views: 580,
-        rating: 220,
-        likes: 98
+        projectTitle: "project six",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     }, {
         imageURL: "https://mobirise.com/bootstrap-4-theme/assets/images/hotel-template.jpg",
-        projectTitle: "title",
-        date: "20/11/2019",
-        views: 200,
-        rating: 200,
-        likes: 32
+        projectTitle: "project seven",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     },
     {
         imageURL: "https://colorlib.com/wp/wp-content/uploads/sites/2/menztailor-free-template-388x306.jpg",
-        projectTitle: "title",
-        date: "10/09/2020",
-        views: 580,
-        rating: 220,
-        likes: 98
+        projectTitle: "project eight",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     }, {
         imageURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9c4AIwXXINgJUMS39tddg92pKz-1-DePZ-x77ZQgneqWKHhpS&usqp=CAU",
-        projectTitle: "title",
-        date: "20/11/2019",
-        views: 200,
-        rating: 200,
-        likes: 32
+        projectTitle: "project nine",
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes: Math.round(Math.random()*(300-50)+50)
     }
-]));
+];
 
-//convert string data to array
-var projects = JSON.parse(localStorage.getItem("projects"))
-getProjects()
+ // check if there's local storage projects
+ if (localStorage.length !== 0){
+     
+     projectsArr = JSON.parse(localStorage.getItem("projects"));
+     
+        // show projects
+         getProjects()
+
+}
+
+// var projectsArr = [];
+
+
+// console.log(projectsArr.length +'  2222222222222222222222')
+console.log( uploadbBtn )
+
+// click on up;oad button ((event lastner))
+uploadbBtn.addEventListener('click',function(){
+
+    if (projectName.value.trim() ===''){
+        alert('project name not allow to be empty ')
+        return false
+    }
+   
+    else {
+        var conf = confirm("if your url img is uncorrect or null the image won't appear ")
+
+        if ( conf ){
+            addProject()
+        }else{
+            return false
+        }
+    }
+})
+
+
+// add function
+function addProject(){
+
+    const project = {
+        imageURL : projectUrl.value || 'imgs/404.jpg',
+        projectTitle : projectName.value ,
+        // date : this.day +'/'+this.month +'/' +this.year  ,
+        day : Math.round(Math.random()*(31-1)+1) ,
+        month : Math.round(Math.random()*(13-1)+1),
+        year : 2020,
+        views : Math.round(Math.random()*(300-50)+50),
+        rating: Math.round(Math.random()*(300-50)+50),
+        likes:  Math.round(Math.random()*(300-50)+50)
+        
+        }
+console.log(project.day)
+        projectsArr.push(project);
+
+        console.log(projectsArr.length +'3333333333333')
+        
+        //set array for project ******************* 
+        localStorage.setItem("projects", JSON.stringify(projectsArr));
+        
+        console.log('push' + projectName.value )
+
+        // show projects
+        // getProjects()
+
+
+}
+
+
+// //convert string data to array
+// var projects = JSON.parse(localStorage.getItem("projects"))
+
+
+// getProjects()
 
 //get projects data
 function getProjects() {
 
     var listProjects = '';
-    for (let i of projects) {
+    for (let i of projectsArr) {
         listProjects += `
         <div class="col-md-4 p-4 projectBox">
         <div class="card shadow h-100">
             <img src="${i.imageURL}" class="w-100 border-bottom border-light h-75" alt="">
             <div class="p-3">
                 <h4>${i.projectTitle}</h4>
-                <p>${i.date}</p>
+                <p>${i.day} / ${i.month} / ${i.year}</p>
             </div>
             <div class="p-3 d-flex justify-content-around border-top">
                 <div class="">
@@ -220,7 +299,7 @@ function getProjects() {
     </div>
         `
     }
-    document.getElementById('projects-cards').innerHTML += listProjects 
+    document.getElementById('projects-cards').innerHTML += listProjects ;
 }
 
 
