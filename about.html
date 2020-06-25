@@ -13,6 +13,30 @@
 </head>
 
 <body>
+
+    <div class="upload-icon"  data-toggle="modal" data-target="#exampleModal2">
+        <i class="fas fa-upload" ></i>
+    </div>
+    
+    <div class="setting-box">
+        <div class="setting-icon">
+            <i class="fa fa-gear"></i>
+        </div>
+        <div class="setting-contanier">
+           <div class="color-box">
+               <h4>Change Color</h4>
+               <ul class="colors-list">
+                   <li data-color="#00afec" data-color2="#00ecde"  class="active-color"></li>
+                   <li data-color="#131414" data-color2="#8f1313" ></li>
+                   <li data-color="#5f490c" data-color2="#be9010" ></li>
+                   <li data-color="#0f2c3f" data-color2="#1a64b9" ></li>
+                   <li data-color="grey" data-color2="black" ></li>
+               </ul>
+           </div>
+        </div>
+    </div>
+
+
     <header>
         <!-- navigation  -->
         <div class="navigation">
@@ -89,10 +113,10 @@
     <section class="sign-in" id="#signInForm">
 
     </section>
-    <!-- scroll to top icon -->
-    <div class="scrolltotop">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+   <!-- scroll to top icon -->
+        <div class="scrolltotop icons">
+            <i class="fas fa-arrow-up"></i>
+        </div>
 
     <!-- about first section -->
     <section>
@@ -151,8 +175,49 @@
         </div>
     </section>
 
+    <!-- upload content -->
+    <div id="signIn-form">
+        <!-- Modal -->
+         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+             <div class="modal-dialog">
+                 <div class=" modal-content">
+                     <div class="modal-body ">
+                         <div class="frame row border-modal">
+                             <div class="col-md-12 text-center left-box p-4">
+                                 
+     
+                                 <div class="section-heading pt-3">
+                                     <h3>Upload your project</h3>
+                                 </div>    
+                                                           
+                                     
+                                 
+                                 
+                                 <form>
+                                     <div class="form-group">
+                                         <input id="upload-name" class="form-group-input" type="text" name="upload" placeholder="Projet Name">
+                                         <label class="form-group-label" for="upload">Projet Name</label>
+                                         
+                                     </div>
+                                     <div class="form-group">
+                                         <input id="upload-img" class="form-group-input" type="text" name="pass" placeholder="Image Link  .. ex:https://source.unsplash.com/random/700x700/?programming">
+                                         <label class="form-group-label" for="password">Image Link</label>
+     
+                                     </div>
+                                     <button id="upload-btn" class="btn-green btnn mx-auto mt-4">UpLoad</button>
+                                 </form>
+     
+                             </div>
+                           
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
 
 
+    <!-- footer -->
     <div class="before-footer py-3">
         <div class="container py-3">
             <div class="row w-100 text-center">
