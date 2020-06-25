@@ -17,7 +17,8 @@ body {
 section {
     padding: 3rem;
 }
-.icons{
+
+.icons {
     background-image: radial-gradient(#21292c, #1a1c1d);
     display: inline-block;
     text-align: center;
@@ -28,24 +29,23 @@ section {
     border-radius: 50%;
 }
 
-.scrolltotop{
+.scrolltotop {
     position: fixed;
     right: 1rem;
-    bottom: 1rem;    
+    bottom: 1rem;
     display: none;
 }
 
-.icons i{
-    background-image: linear-gradient(to bottom , var(--main-color-light), var(--main-color-dark));
+.icons i {
+    background-image: linear-gradient(to bottom, var(--main-color-light), var(--main-color-dark));
     line-height: 3rem;
     font-size: 1.6rem;
-
-
     -webkit-background-clip: text;
--webkit-background-clip: text;
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
+
 
 /*  *************************** intro page ********************** */
 
@@ -161,9 +161,11 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .overlay-video{
-    background: linear-gradient(45deg, var(--main-color-dark) 0%, var(--main-color-light) 100%);  position: fixed;
+}
+
+.overlay-video {
+    background: linear-gradient(45deg, var(--main-color-dark) 0%, var(--main-color-light) 100%);
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 900;
@@ -178,8 +180,8 @@ section {
     z-index: 9;
 }
 
-  #intro-header{
-    background-image:linear-gradient(45deg, var(--main-color-dark) 0%, var(--main-color-light)100%) ; 
+#intro-header {
+    background-image: linear-gradient(45deg, var(--main-color-dark) 0%, var(--main-color-light)100%);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -606,19 +608,20 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-	position: relative;
+    position: relative;
 }
-.section-heading h2{
+
+.section-heading h2 {
     margin-bottom: 2rem;
     font-size: 3.5rem;
     margin-bottom: 1.7rem;
     padding-bottom: 1.9rem;
     font-weight: 700;
 }
+
 .section-heading h3 {
     font-weight: 500;
     padding-bottom: 1.44rem;
-
 }
 
 .section-heading h2::before{
@@ -635,17 +638,18 @@ header {
 	margin: 0 auto
 	
 }
+
 .section-heading h2::after,
-.section-heading h3::after{
+.section-heading h3::after {
     content: " ";
-	position: absolute;
-	right: 0;
-	left: 0;
-	margin: 0 auto;
-	background-color: #065875;
-	height: 1.5px;
-	bottom:8px;
-	width: 190px
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #065875;
+    height: 1.5px;
+    bottom: 8px;
+    width: 190px
 }
 
 .section-heading h3::after{
@@ -793,80 +797,6 @@ textarea {
     margin: 20px auto;
 }
 
-sup {
-    color: red;
-}
-
-
-/* contact form  */
-
-.contact-left-inner,
-.contact-right-inner {
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    padding: 3rem;
-}
-
-.contact-left-inner {
-    height: 100%;
-}
-
-
-/* end  */
-
-
-/* signin and signup forms  */
-
-.projectBox img {
-    border-radius: 4px;
-}
-
-
-/* @extend display-flex; */
-
-display-flex,
-.display-flex,
-.display-flex-center,
-.signup-content,
-.signin-content,
-.social-login,
-.socials {
-    display: flex;
-    display: -webkit-flex;
-}
-
-
-/* @extend list-type-ulli; */
-
-list-type-ulli,
-.socials {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* poppins-300 - latin */
-
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    src: url("../fonts/poppins/poppins-v5-latin-300.eot");
-    /* IE9 Compat Modes */
-    src: local("Poppins Light"), local("Poppins-Light"), url("../fonts/poppins/poppins-v5-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/poppins-v5-latin-300.woff2") format("woff2"), url("../fonts/poppins/poppins-v5-latin-300.woff") format("woff"), url("../fonts/poppins/poppins-v5-latin-300.ttf") format("truetype"), url("../fonts/poppins/poppins-v5-latin-300.svg#Poppins") format("svg");
-    /* Legacy iOS */
-}
-
-a:focus,
-a:active {
-    text-decoration: none;
-    outline: none;
-    transition: all 300ms ease 0s;
-}
-
-input,
-select,
 textarea {
     outline: none;
     appearance: unset !important;
@@ -1131,19 +1061,15 @@ form .form-group.error small{
     visibility: visible;
 }
 
-form .form-group.error .form-group-input{border-bottom: 3px solid #ff7730 !important;}
-
-figure {
-    margin-bottom: 30px;
-    text-align: center;
+.line {
+    background-color: #ccc;
+    height: 1px;
+    width: 60px;
+    margin: 20px auto;
 }
 
-.form-submit {
-    display: inline-block;
-    background: linear-gradient(45deg, var(--main-color-dark), var(--main-color-light));
-    color: #fff;
-    width: auto;
-    cursor: pointer;
+.contact-form-submit {
+    background-image: linear-gradient(45deg, var(--main-color-dark) 0%, var(--main-color-light)100%);
     border-radius: 25px;
     margin-bottom: 20px;
 }
