@@ -283,15 +283,12 @@ function addProject(){
         likes:  Math.round(Math.random()*(300-50)+50)
         
         }
-console.log(project.day)
         projectsArr.push(project);
 
-        console.log(projectsArr.length +'3333333333333')
         
         //set array for project ******************* 
         localStorage.setItem("projects", JSON.stringify(projectsArr));
         
-        console.log('push' + projectName.value )
 
         // show projects
         // getProjects()
@@ -349,57 +346,46 @@ document.querySelector('.input-search').addEventListener('keyup', function(e){
     document.querySelector('#projects-cards').style.display = 'none'
     var text = e.target.value.toLowerCase();
     
+
+    let contentSearch = ''
     projectsArr.forEach(element => {
-        var item = element.projectTitle.toLowerCase();
-        
-        if (item.indexOf(text) != -1){
-            
-            console.log('elklam dah mawgoood ')
-            
-            var listProjects = '';
-            for (let i of projectsArr) {
-                listProjects += `
+        var item = element.projectTitle.toLowerCase();        
+
+        if (element.projectTitle.toLowerCase().includes(text) == true){
+                contentSearch += `
                 <div class="col-md-4 p-4 projectBox">
                 <div class="card shadow h-100">
-                <img src="${i.imageURL}" class="w-100 border-bottom border-light h-75" alt="">
+                <img src="${element.imageURL}" class="w-100 border-bottom border-light h-75" alt="">
                 <div class="p-3">
-                <h4>${i.projectTitle}</h4>
-                <p>${i.day} / ${i.month} / ${i.year}</p>
+                <h4>${element.projectTitle}</h4>
+                <p>${element.day} / ${element.month} / ${element.year}</p>
                 </div>
                 <div class="p-3 d-flex justify-content-around border-top">
                 <div class="">
                 <i class="far fa-eye"></i>
-                <span>${i.views}</span>
+                <span>${element.views}</span>
                 </div class="">
                 <div class="">   
                 <a href="#" class="text-decoration-none"><i class="fas fa-star text-warning"></i></a>
-                <span>${i.rating}</span>
+                <span>${element.rating}</span>
                 </div class="">
                 <div class="">
                 <a href="#" class="text-decoration-none"><i class="fas fa-heart text-danger"></i></a>
-                <span id="projectsLikes">${i.likes}</span>
+                <span id="projectsLikes">${element.likes}</span>
                 </div class="">
                 </div>
                 </div>
                 </div>
                 `
-            }
-            document.getElementById('projects-cards-search').innerHTML += listProjects ;
-            
-            
+            document.getElementById('projects-cards-search').innerHTML = contentSearch ;          
             
         }else{
-            
-            console.log('elklam dah meeeeeeeesh mawgoood ')
+       
+            document.getElementById('projects-cards-search').innerHTML = `<div class="alert w-100 alert-danger" role="alert">
+            no results of your search
+          </div>`
         }
-
-
-
-
     });
-
-
-
 })
 
 
