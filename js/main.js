@@ -40,6 +40,13 @@ navbtn.addEventListener('click', function() {
 // show intro circle
 $(document).ready(function() {
     $('.heading-circle-sec').fadeIn(2000);
+
+    setTimeout(() => {
+        $('.setting-box').fadeIn(1000);
+        $('.upload-icon').fadeIn(1000);
+
+    },1000 );
+
     
     setTimeout(() => {
         // fadIn circle 
@@ -53,6 +60,7 @@ $(document).ready(function() {
                 setTimeout(() => {
                     $('.intro-btn').show();
                     $('.intro-btn').addClass('animate__animated animate__zoomIn');
+                   
                 }, 2200);
             }, 2000);          
         }, 8000);     
@@ -72,16 +80,24 @@ $(window).scroll(function(){
     }
 });
 scrollToTOp.click(function(){
-    console.log('sad')
     $('html,body').animate({
         scrollTop : 0
     } , 1200);
 });
 //form search
-document.querySelector('.search-icon').onclick = function(e) {
-    e.preventDefault();
-    document.querySelector('.form-search').classList.toggle('open');
-}
+$('.search-icon').click(function(e) {
+    // e.preventDefault();
+    $('.form-search').toggleClass('open');
+    $('.logo-box').toggleClass('hide-responsive')
+    
+    $('.form-search.open i').click(function(){
+         
+        console.log('codeoof sear')
+    })
+
+    
+    
+})
 //slider in work page by plugin owl-carousel
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
@@ -102,6 +118,38 @@ $(document).ready(function() {
         },
     })
 });
+
+
+// setting box
+settingIcon.onclick= function(){
+    document.querySelector('.setting-box').classList.toggle('open-setting');
+    document.querySelector('.setting-icon i').classList.toggle('fa-spin');
+    document.querySelector('.upload-icon').classList.toggle('d-none');
+}
+
+const colorLi = document.querySelectorAll('.colors-list li');
+colorLi.forEach(li => {
+    li.addEventListener('click', e => {
+        //set color in root
+        document.documentElement.style.setProperty('--main-color-dark',e.target.dataset.color)
+        document.documentElement.style.setProperty('--main-color-light',e.target.dataset.color2)
+        //set colors in local storage 
+        localStorage.setItem('color-option',e.target.dataset.color)
+        localStorage.setItem('color-option2',e.target.dataset.color2)
+        // --remove active class from elemnts
+        e.target.parentElement.querySelectorAll('.active-color').forEach(element => {
+            element.classList.remove('active-color')
+        });
+        //add active class to active color element
+        e.target.classList.add('active-color')
+
+
+    })
+});
+
+
+
+
 
 var projectsArr =[
     {
@@ -301,34 +349,6 @@ function getProjects() {
     }
     document.getElementById('projects-cards').innerHTML += listProjects ;
 }
-
-
-// setting box
-settingIcon.onclick= function(){
-    document.querySelector('.setting-box').classList.toggle('open-setting');
-    document.querySelector('.setting-icon i').classList.toggle('fa-spin');
-    document.querySelector('.upload-icon').classList.toggle('d-none');
-}
-
-const colorLi = document.querySelectorAll('.colors-list li');
-colorLi.forEach(li => {
-    li.addEventListener('click', e => {
-        //set color in root
-        document.documentElement.style.setProperty('--main-color-dark',e.target.dataset.color)
-        document.documentElement.style.setProperty('--main-color-light',e.target.dataset.color2)
-        //set colors in local storage 
-        localStorage.setItem('color-option',e.target.dataset.color)
-        localStorage.setItem('color-option2',e.target.dataset.color2)
-        // --remove active class from elemnts
-        e.target.parentElement.querySelectorAll('.active-color').forEach(element => {
-            element.classList.remove('active-color')
-        });
-        //add active class to active color element
-        e.target.classList.add('active-color')
-
-
-    })
-});
 
 
 
