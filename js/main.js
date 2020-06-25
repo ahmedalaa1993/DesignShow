@@ -7,10 +7,7 @@ const navbtn = document.getElementById('nav-toggle'),
     uploadbBtn = document.querySelector('#upload-btn')    
     ;
     
-    console.log(uploadbBtn)
-
    
-
      // check if there's local storage color changing
     let mainColor = localStorage.getItem('color-option');
     let mainColor2 = localStorage.getItem('color-option2');
@@ -84,20 +81,18 @@ scrollToTOp.click(function(){
         scrollTop : 0
     } , 1200);
 });
+
 //form search
 $('.search-icon').click(function(e) {
     // e.preventDefault();
     $('.form-search').toggleClass('open');
     $('.logo-box').toggleClass('hide-responsive')
-    
-    $('.form-search.open i').click(function(){
-         
-        console.log('codeoof sear')
-    })
-
-    
+    $('.search-click').fadeToggle(1100);
+  
     
 })
+
+
 //slider in work page by plugin owl-carousel
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
@@ -252,11 +247,6 @@ var projectsArr =[
 
 }
 
-// var projectsArr = [];
-
-
-// console.log(projectsArr.length +'  2222222222222222222222')
-console.log( uploadbBtn )
 
 // click on up;oad button ((event lastner))
 uploadbBtn.addEventListener('click',function(){
@@ -350,6 +340,67 @@ function getProjects() {
     document.getElementById('projects-cards').innerHTML += listProjects ;
 }
 
+
+
+
+document.querySelector('.input-search').addEventListener('keyup', function(e){
+    
+    console.log(e.target.value)
+    document.querySelector('#projects-cards').style.display = 'none'
+    var text = e.target.value.toLowerCase();
+    
+    projectsArr.forEach(element => {
+        var item = element.projectTitle.toLowerCase();
+        
+        if (item.indexOf(text) != -1){
+            
+            console.log('elklam dah mawgoood ')
+            
+            var listProjects = '';
+            for (let i of projectsArr) {
+                listProjects += `
+                <div class="col-md-4 p-4 projectBox">
+                <div class="card shadow h-100">
+                <img src="${i.imageURL}" class="w-100 border-bottom border-light h-75" alt="">
+                <div class="p-3">
+                <h4>${i.projectTitle}</h4>
+                <p>${i.day} / ${i.month} / ${i.year}</p>
+                </div>
+                <div class="p-3 d-flex justify-content-around border-top">
+                <div class="">
+                <i class="far fa-eye"></i>
+                <span>${i.views}</span>
+                </div class="">
+                <div class="">   
+                <a href="#" class="text-decoration-none"><i class="fas fa-star text-warning"></i></a>
+                <span>${i.rating}</span>
+                </div class="">
+                <div class="">
+                <a href="#" class="text-decoration-none"><i class="fas fa-heart text-danger"></i></a>
+                <span id="projectsLikes">${i.likes}</span>
+                </div class="">
+                </div>
+                </div>
+                </div>
+                `
+            }
+            document.getElementById('projects-cards-search').innerHTML += listProjects ;
+            
+            
+            
+        }else{
+            
+            console.log('elklam dah meeeeeeeesh mawgoood ')
+        }
+
+
+
+
+    });
+
+
+
+})
 
 
 

@@ -457,11 +457,13 @@ section {
     width: 14rem;
 }
 
-.form-search.open i {
+.form-search.open i ,
+.search-click i {
     background-image: radial-gradient(var(--main-color-light), var(--main-color-dark));
 }
 
-.search-box i {
+.search-box i ,
+.search-click i{
     position: absolute;
     top: 1.5px;
     right: 2px;
@@ -474,6 +476,14 @@ section {
     color: #fff !important;
 }
 
+.search-click {
+    display: none;
+}
+.search-click i{
+    right: -2.3rem !important;
+    font-size: 1.3rem;
+
+}
 .search-box i::before {
     position: absolute;
     color: #fff !important;
