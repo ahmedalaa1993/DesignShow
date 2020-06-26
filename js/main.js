@@ -5,9 +5,8 @@ const navbtn = document.getElementById('nav-toggle'),
     projectName = document.querySelector('#upload-name'),
     projectUrl = document.querySelector('#upload-img'),
     uploadbBtn = document.querySelector('#upload-btn')    
-    ;
-    
-   
+    ;  
+
      // check if there's local storage color changing
     let mainColor = localStorage.getItem('color-option');
     let mainColor2 = localStorage.getItem('color-option2');
@@ -23,12 +22,9 @@ const navbtn = document.getElementById('nav-toggle'),
             //add active class to active color element
             element.classList.add('active-color')
         });
-
-
     }
     // navigation bar
 navbtn.addEventListener('click', function() {
-
     navBack.classList.toggle('open');
     this.classList.toggle('open');
     document.querySelector('.navbar-navi').classList.toggle('open')
@@ -43,7 +39,6 @@ $(document).ready(function() {
         $('.upload-icon').fadeIn(1000);
 
     },1000 );
-
     
     setTimeout(() => {
         // fadIn circle 
@@ -141,9 +136,6 @@ colorLi.forEach(li => {
 
     })
 });
-
-
-
 
 
 var projectsArr =[
@@ -283,25 +275,11 @@ function addProject(){
         likes:  Math.round(Math.random()*(300-50)+50)
         
         }
-        projectsArr.push(project);
-
-        
+        projectsArr.push(project);        
         //set array for project ******************* 
         localStorage.setItem("projects", JSON.stringify(projectsArr));
-        
-
-        // show projects
-        // getProjects()
-
-
+     
 }
-
-
-// //convert string data to array
-// var projects = JSON.parse(localStorage.getItem("projects"))
-
-
-// getProjects()
 
 //get projects data
 function getProjects() {
@@ -387,7 +365,3 @@ document.querySelector('.input-search').addEventListener('keyup', function(e){
         }
     });
 })
-
-
-
-
