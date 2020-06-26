@@ -237,6 +237,10 @@ var projectsArr =[
         // show projects
          getProjects()
 
+}else{
+       // show projects
+       getProjects()
+
 }
 
 
@@ -320,16 +324,19 @@ function getProjects() {
 
 document.querySelector('.input-search').addEventListener('keyup', function(e){
     
-    console.log(e.target.value)
-    document.querySelector('#projects-cards').style.display = 'none'
+    // console.log(document.querySelector('.input-search').value)
+
+    // document.querySelector('#projects-cards').style.display = 'none'
     var text = e.target.value.toLowerCase();
-    
+
+    console.log(text)
 
     let contentSearch = ''
     projectsArr.forEach(element => {
         var item = element.projectTitle.toLowerCase();        
 
         if (element.projectTitle.toLowerCase().includes(text) == true){
+
                 contentSearch += `
                 <div class="col-md-4 p-4 projectBox">
                 <div class="card shadow h-100">
@@ -355,11 +362,11 @@ document.querySelector('.input-search').addEventListener('keyup', function(e){
                 </div>
                 </div>
                 `
-            document.getElementById('projects-cards-search').innerHTML = contentSearch ;          
+            document.getElementById('projects-cards').innerHTML = contentSearch ;          
             
         }else{
        
-            document.getElementById('projects-cards-search').innerHTML = `<div class="alert w-100 alert-danger" role="alert">
+            document.getElementById('projects-cards').innerHTML = `<div class="alert w-100 alert-danger" role="alert">
             no results of your search
           </div>`
         }
