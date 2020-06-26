@@ -19,25 +19,25 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <div class="upload-icon"  data-toggle="modal" data-target="#exampleModal2">
-        <i class="fas fa-upload" ></i>
+    <div class="upload-icon" data-toggle="modal" data-target="#exampleModal2">
+        <i class="fas fa-upload"></i>
     </div>
-    
+
     <div class="setting-box">
         <div class="setting-icon">
             <i class="fa fa-gear"></i>
         </div>
         <div class="setting-contanier">
-           <div class="color-box">
-               <h4>Change Color</h4>
-               <ul class="colors-list">
-                   <li data-color="#00afec" data-color2="#00ecde"  class="active-color"></li>
-                   <li data-color="#131414" data-color2="#8f1313" ></li>
-                   <li data-color="#5f490c" data-color2="#be9010" ></li>
-                   <li data-color="#0f2c3f" data-color2="#1a64b9" ></li>
-                   <li data-color="grey" data-color2="black" ></li>
-               </ul>
-           </div>
+            <div class="color-box">
+                <h4>Change Color</h4>
+                <ul class="colors-list">
+                    <li data-color="#00afec" data-color2="#00ecde" class="active-color"></li>
+                    <li data-color="#131414" data-color2="#8f1313"></li>
+                    <li data-color="#5f490c" data-color2="#be9010"></li>
+                    <li data-color="#0f2c3f" data-color2="#1a64b9"></li>
+                    <li data-color="grey" data-color2="black"></li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -134,134 +134,116 @@
             </div>
         </div>
     </header>
-    
-    <!-- <section class="sign-in" id="#signInForm">
-    </section> -->
-    <!-- start contact form  -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col contact-left p-3">
-                    <div class="contact-left-inner">
-                        <h4 class="font-weight-bold">Get in touch</h4>
-                        <p class="pb-3">Lorem ipsum dolor sit amet.</p>
-                        <div class="address py-3">
-                            <p class="font-weight-bold">Address</p>
-                            <span> 501,St Ahmed Badwy</span>
 
+
+
+    <section class="py-3">
+        <div class="container py-2">
+            <div class="contact-us py-5 row">
+                <div class="col-md-3 p-1">
+                    <div class="card w-100 shadow p-5 h-100 leftBox">
+                        <div class="getIN pt-3">
+                            <h4 class="font-weight-bold">Get in touch</h4>
+                            <p>Lorem ipsum dolor sit amet.</p>
                         </div>
-                        <div class="email">
-                            <p>Email</p>
-                            <span>Test@Test.Com</span>
+                        <div class="pt-5">
+                            <h4 class="font-weight-bold">Address</h4>
+                            <p> 501,St Ahmed Badwy</p>
                         </div>
-                        <div class="phone">
-                            <p>phone</p>
-                            <span>012587424712</span>
+                        <div class="pt-4">
+                            <h4 class="font-weight-bold">E-mail</h4>
+                            <p>Test@Test.Com</p>
+                        </div>
+                        <div class="pt-4">
+                            <h4 class="font-weight-bold">Phone</h4>
+                            <p>012587424712</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 contact-right p-3">
-                    <div class="contact-right-inner">
-                        <div class="heading text-center">
-                            <h4>please, fill out the form of contact us</h4>
+                <div class="offset-md-1"></div>
+                <div class="col-md-8 p-1">
+                    <div class="card shadow h-100 rightBox">
+                        <div class="pt-5 text-center">
+                            <h4>Please, Fill out the form of contact us</h4>
                             <div class="line"></div>
                         </div>
-                        <form>
-                            <div class="name-group mb-3 d-flex">
-                                <input class="form-control w-50 mr-3 p-4" type="text" name="first" placeholder="First name">
-                                <input class="form-control w-50 p-4" type="text" name="last" placeholder="Last name">
-                            </div>
-                            <div class="email py-3">
-                                <p class="font-weight-bold">Email</p>
-                                <span>Test@Test.Com</span>
-                            </div>
-                            <div class="phone py-3">
-                                <p class="font-weight-bold">phone</p>
-                                <span>012587424712</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8 contact-right p-3">
-                        <div class="contact-right-inner">
-                            <div class="heading text-center">
-                                <h4>Please, Fill out the form of contact us</h4>
-                                <div class="line"></div>
-                            </div>
-                            <form>
-                                <div class="name-group mb-3 form-row">
-                                    <div class="form-group col-md-6 py-1">
-                                        <input class="form-control" type="text" name="first" placeholder="First name">
-                                    </div>
-                                    <div class="form-group col-md-6 py-1">
-                                        <input class="form-control" type="text" name="last" placeholder="Last name">
-                                    </div>
-                                    <div class="form-group col-md-6 py-1">
-                                        <input class="form-control" type="email" name="email" placeholder="Email">
-                                    </div>
-                                    <div class="form-group col-md-6 py-1">
-                                        <input class="form-control" type="text" name="phone" placeholder="Phone Number">
-                                    </div>
+                        <form class="contact-form ">
+                            <div class="form-row px-5">
+                                <div class="form-group col-md-6  m-0">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName">
                                 </div>
-                                <div class="form-group">
-                                    <textarea id="my-textarea" class="form-control" name="textarea" rows="6" placeholder="Message"></textarea>
+                                <div class="form-group col-md-6  m-0">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName">
                                 </div>
-                                <button class="btn btnn btn-block" type="button">Send</button>
-                            </form>
-                        </div>
+                                <div class="form-group col-md-6  m-0">
+                                    <label for="phoneNumber">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumber">
+                                </div>
+                                <div class="form-group col-md-6  m-0">
+                                    <label for="email">E-mail</label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+                                <div class="form-group col-md-12 m-0">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="4"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-auto text-center py-3">
+                                <button type="submit" class="contact-form-submit p-2 btn mb-2 px-4">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            
     </section>
-
-    <!-- end contact form  -->
-
 
 
 
     <!-- upload content -->
     <div id="signIn-form">
         <!-- Modal -->
-         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-             <div class="modal-dialog">
-                 <div class=" modal-content">
-                     <div class="modal-body ">
-                         <div class="frame row border-modal">
-                             <div class="col-md-12 text-center left-box p-4">
-                                 
-     
-                                 <div class="section-heading pt-3">
-                                     <h3>Upload your project</h3>
-                                 </div>    
-                                                           
-                                     
-                                 
-                                 
-                                 <form>
-                                     <div class="form-group">
-                                         <input id="upload-name" class="form-group-input" type="text" name="upload" placeholder="Projet Name">
-                                         <label class="form-group-label" for="upload">Projet Name</label>
-                                         
-                                     </div>
-                                     <div class="form-group">
-                                         <input id="upload-img" class="form-group-input" type="text" name="pass" placeholder="Image Link  .. ex:https://source.unsplash.com/random/700x700/?programming">
-                                         <label class="form-group-label" for="password">Image Link</label>
-     
-                                     </div>
-                                     <button id="upload-btn" class="btn-green btnn mx-auto mt-4">UpLoad</button>
-                                 </form>
-     
-                             </div>
-                           
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class=" modal-content">
+                    <div class="modal-body ">
+                        <div class="frame row border-modal">
+                            <div class="col-md-12 text-center left-box p-4">
 
 
-     <!-- footer -->
+                                <div class="section-heading pt-3">
+                                    <h3>Upload your project</h3>
+                                </div>
+
+
+
+
+                                <form>
+                                    <div class="form-group">
+                                        <input id="upload-name" class="form-group-input" type="text" name="upload" placeholder="Projet Name">
+                                        <label class="form-group-label" for="upload">Projet Name</label>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="upload-img" class="form-group-input" type="text" name="pass" placeholder="Image Link  .. ex:https://source.unsplash.com/random/700x700/?programming">
+                                        <label class="form-group-label" for="password">Image Link</label>
+
+                                    </div>
+                                    <button id="upload-btn" class="btn-green btnn mx-auto mt-4">UpLoad</button>
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
     <div class="before-footer py-3">
         <div class="container py-3">
             <div class="row w-100 text-center">
